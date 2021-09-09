@@ -1,7 +1,7 @@
 DEVICE_PATH := device/xiaomi/cancro
 
+# Inherit from msm8974-common
 $(call inherit-product, device/xiaomi/msm8974-common/msm8974-common.mk)
-$(call inherit-product, vendor/xiaomi/cancro/cancro-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay
@@ -72,10 +72,13 @@ PRODUCT_PACKAGES += \
 
 # Touch
 PRODUCT_PACKAGES += \
-    vendor.mokee.touch@1.0-service.cancro
+    vendor.lineage.touch@1.0-service.cancro
 
 # WiFi
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/wifi/WCNSS_qcom_wlan_nv.bin:system/vendor/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin \
     $(DEVICE_PATH)/wifi/WCNSS_qcom_wlan_nv_x4.bin:system/vendor/firmware/wlan/prima/WCNSS_qcom_wlan_nv_x4.bin \
     $(DEVICE_PATH)/wifi/WCNSS_qcom_wlan_nv_x4lte.bin:system/vendor/firmware/wlan/prima/WCNSS_qcom_wlan_nv_x4lte.bin
+
+# Inherit the proprietary files
+$(call inherit-product, vendor/xiaomi/cancro/cancro-vendor.mk)
