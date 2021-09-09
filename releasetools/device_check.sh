@@ -48,8 +48,8 @@ else
     rm -f /system/system/vendor/etc/diracmobile_4.config
 fi
 
-if [ $RAW_ID == 1978 ] || [ $RAW_ID == 1972 ] || [ $RAW_ID == 1974 ]; then
-    # Supported device (Mi3w - 1978 or Mi4 - 1972, 1974)
+if [ $RAW_ID == 1978 ] || [ $RAW_ID == 1977 ] || [ $RAW_ID == 1972 ] || [ $RAW_ID == 1974 ]; then
+    # Supported device (Mi3w - 1978 or Mi3c - 1977 or Mi4 - 1972, 1974)
     return 0
 else
     # Unsupported device
