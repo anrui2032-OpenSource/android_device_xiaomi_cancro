@@ -41,6 +41,7 @@ else
     rm -rf /system/system/vendor/etc/permissions/android.hardware.consumerir.xml
     rm -rf /system/system/vendor/bin/hw/android.hardware.ir@1.0-service.cancro
     rm -rf /system/system/vendor/etc/init/android.hardware.ir@1.0-service.cancro.rc
+    rm -rf /system/system/vendor/etc/vintf/manifest/android.hardware.ir@1.0-service.cancro.xml
     # Remove Mi4 audio configs
     rm -rf /system/system/etc/acdbdata/MTP/MTP_Speaker_cal_4.acdb
     rm -f /system/system/vendor/etc/mixer_paths_4.xml
